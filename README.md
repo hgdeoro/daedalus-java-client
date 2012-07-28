@@ -19,3 +19,9 @@ To download the jars to be uses with Eclipse, you must run:
     mvn dependency:copy-dependencies
 
 now all the requiered JARs should be accesible by Eclipse.
+
+To create the JAR, you must run:
+
+    mvn package
+
+and the JARs will be at target/DaedalusJavaClient-1.0-SNAPSHOT.jar
