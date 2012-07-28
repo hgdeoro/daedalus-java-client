@@ -46,11 +46,16 @@ public class DaedalusClient {
 	 * time.
 	 * 
 	 * @param message
+	 *            The message to send
 	 * @param severity
+	 *            One of the valid severities from the Severity enum
 	 * @param host
+	 *            The host that originated the message
 	 * @param application
+	 *            The application that originated the message
 	 * @throws Exception
-	 * @return
+	 *             If error occurs.
+	 * @return True if the messages was sent ok, false otherwhise.
 	 */
 	public boolean sendMessage(String message, Severity severity, String host,
 			String application) throws Exception {
@@ -58,6 +63,7 @@ public class DaedalusClient {
 		// Setup default values
 		if (host == null)
 			host = this.defaultMessageHost;
+
 		if (application == null)
 			application = this.defaultMessageApplication;
 
@@ -99,6 +105,9 @@ public class DaedalusClient {
 			return false;
 	}
 
+	/*
+	 * Example use of the java client of Daedalus.
+	 */
 	public static void main(String args[]) throws Exception {
 		new DaedalusClient().sendMessage("TEST MESSAGE FROM JAVA",
 				Severity.INFO, "testhost", "testapp");
