@@ -34,13 +34,14 @@ public class DaedalusClientTest extends TestCase {
 	 */
 	public void testSendMessage() throws Exception {
 		boolean sentOk;
-		sentOk = new DaedalusClient().sendMessage("TEST MESSAGE FROM JAVA",
-				Severity.INFO, "testhost", "testapp");
+		sentOk = new DaedalusClient().sendMessage(
+				"An INFO message from the Java Daedalus client", Severity.INFO,
+				"testhost", "testapp");
 		Assert.assertTrue(sentOk);
 
 		sentOk = new DaedalusClient(null, -1, "testhost", "testapp")
-				.sendMessage("TEST MESSAGE FROM JAVA", Severity.INFO, null,
-						null);
+				.sendMessage("A WARN message from the Java Daedalus client",
+						Severity.WARN, null, null);
 		Assert.assertTrue(sentOk);
 	}
 }

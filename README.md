@@ -25,3 +25,8 @@ To create the JAR, you must run:
     mvn package
 
 and the JARs will be at target/DaedalusJavaClient-1.0-SNAPSHOT.jar
+
+And to run the tests, I use:
+
+    mvn --quiet -Dsurefire.useFile=false test
+
