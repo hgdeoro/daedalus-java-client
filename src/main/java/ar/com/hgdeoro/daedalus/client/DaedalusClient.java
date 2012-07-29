@@ -42,6 +42,38 @@ public class DaedalusClient {
 	private String defaultMessageApplication;
 
 	/**
+	 * Default constructor of client.
+	 */
+	public DaedalusClient() {
+	}
+
+	/**
+	 * Creates a Daedalus client with parametrized defaults.
+	 * 
+	 * @param serverHost
+	 *            Hostname or IP of the server. If null, it's ignored and the
+	 *            default is used.
+	 * @param serverPort
+	 *            Port of the server. If -1, it's ignored and the default is
+	 *            used.
+	 * @param defaultMessageHost
+	 *            If null, it's ignored and no default is setted.
+	 * @param defaultMessageApplication
+	 *            If null, it's ignored and no default is setted.
+	 */
+	public DaedalusClient(String serverHost, int serverPort,
+			String defaultMessageHost, String defaultMessageApplication) {
+		if (serverHost != null)
+			this.serverHost = serverHost;
+		if (serverPort > -1)
+			this.serverPort = serverPort;
+		if (defaultMessageHost != null)
+			this.defaultMessageHost = defaultMessageHost;
+		if (defaultMessageApplication != null)
+			this.defaultMessageApplication = defaultMessageApplication;
+	}
+
+	/**
 	 * Sends a message to Daedalus, using the current time as the message's
 	 * time.
 	 * 
@@ -52,7 +84,8 @@ public class DaedalusClient {
 	 * @param host
 	 *            The host that originated the message
 	 * @param application
-	 *            The application that originated the message
+	 *            The application that originated the message. May be null if
+	 *            <code>defaultMessageHost</code>.
 	 * @throws Exception
 	 *             If error occurs.
 	 * @return True if the messages was sent ok, false otherwhise.
