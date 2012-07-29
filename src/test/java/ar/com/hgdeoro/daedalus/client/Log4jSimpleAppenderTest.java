@@ -53,7 +53,7 @@ public class Log4jSimpleAppenderTest extends TestCase {
 	 * @return the suite of tests being tested
 	 */
 	public static Test suite() {
-		return new TestSuite(DaedalusClientTest.class);
+		return new TestSuite(Log4jSimpleAppenderTest.class);
 	}
 
 	public void testAppender() {
