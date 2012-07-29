@@ -8,7 +8,7 @@ import junit.framework.TestSuite;
 /**
  * Unit test for simple App.
  */
-public class ClientTest extends TestCase {
+public class DaedalusClientTest extends TestCase {
 
 	/**
 	 * Create the test case
@@ -16,7 +16,7 @@ public class ClientTest extends TestCase {
 	 * @param testName
 	 *            name of the test case
 	 */
-	public ClientTest(String testName) {
+	public DaedalusClientTest(String testName) {
 		super(testName);
 	}
 
@@ -24,7 +24,7 @@ public class ClientTest extends TestCase {
 	 * @return the suite of tests being tested
 	 */
 	public static Test suite() {
-		return new TestSuite(ClientTest.class);
+		return new TestSuite(DaedalusClientTest.class);
 	}
 
 	/**
