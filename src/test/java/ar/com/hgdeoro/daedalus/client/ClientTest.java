@@ -1,5 +1,6 @@
 package ar.com.hgdeoro.daedalus.client;
 
+import junit.framework.Assert;
 import junit.framework.Test;
 import junit.framework.TestCase;
 import junit.framework.TestSuite;
@@ -27,9 +28,19 @@ public class ClientTest extends TestCase {
 	}
 
 	/**
-	 * Rigourous Test :-)
+	 * Simple test of Daedalus client
+	 * 
+	 * @throws Exception
 	 */
-	public void testApp() {
-		assertTrue(true);
+	public void testSendMessage() throws Exception {
+		boolean sentOk;
+		sentOk = new DaedalusClient().sendMessage("TEST MESSAGE FROM JAVA",
+				Severity.INFO, "testhost", "testapp");
+		Assert.assertTrue(sentOk);
+
+		sentOk = new DaedalusClient(null, -1, "testhost", "testapp")
+				.sendMessage("TEST MESSAGE FROM JAVA", Severity.INFO, null,
+						null);
+		Assert.assertTrue(sentOk);
 	}
 }
