@@ -3,7 +3,7 @@ This project
 
 This project implements a __Java__ client to send messages to [Daedalus](https://github.com/hgdeoro/daedalus).
 
-You can [download the the binary](https://github.com/hgdeoro/daedalus-java-client/downloads), or
+You can [download the binary](https://github.com/hgdeoro/daedalus-java-client/downloads), or
 download the sources and compile'em yourself.
 
 Daedalus
