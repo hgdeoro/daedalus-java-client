@@ -1,13 +1,19 @@
+This project
+----------------------------------------
+
+This project implements a __Java__ client to send messages to [Daedalus](https://github.com/hgdeoro/daedalus).
+
+You can [download the the binary](https://github.com/hgdeoro/daedalus-java-client/downloads), or
+download the sources and compile'em yourself.
+
 Daedalus
 ----------------------------------------
 
-Daedalus is a __Django__ application to store log messages on __Cassandra__.
-The messages are sent using HTTP POST.
+Daedalus is client/server application. The __server__ (what receives the messages) is implemented
+using __Django__. The log messages are stored in __Cassandra__. The __clients__ send the messages
+using a POST messages, allowing to send messages from virtually any language.
 
-This is the Java client to send messages to Daedalus.
-
-The Daedalus project is hosted at [GitHub](https://github.com/hgdeoro/daedalus).
-
+Please, [report any issue here](https://github.com/hgdeoro/daedalus/issues).
 
 Developing
 ----------------------------------------
